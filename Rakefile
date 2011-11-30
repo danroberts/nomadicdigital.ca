@@ -10,24 +10,24 @@ require 'rake'
 require 'net/ssh'
 require 'net/scp'
 
-@remote_host           = 'ssh-shortcut'                  # can be FQDN or set in .ssh/config
-@ssh_username          = 'username'                  # required, even if set in .ssh/config
-@ssh_password          = 'password'                        # using public key set in remote host's .ssh/authorized_keys
-@remote_path           = "/home/username/public_html/dev"   # NO trailing slash
+@remote_host           = 'nomadicdigital.ca'                  # can be FQDN or set in .ssh/config
+@ssh_username          = 'darobe'                  # required, even if set in .ssh/config
+@ssh_password          = 'de1286'                        # using public key set in remote host's .ssh/authorized_keys
+@remote_path           = "/home/darobe/www.nomadicdigital.ca"   # NO trailing slash
 @local_db_dir_path     = 'db-backups'              # NO slashes
 @remote_db_dir_path    = @local_db_dir_path
 
-@mysql_local_user      = ''
+@mysql_local_user      = 'root'
 @mysql_local_password  = ''
-@mysql_local_db_name   = ''
+@mysql_local_db_name   = 'local_wordpress'
 
-@mysql_remote_user     = ''
-@mysql_remote_password = ''
-@mysql_remote_db_name  = ''
-@mysql_remote_host     = 'localhost'              # this might be different on your production environment
+@mysql_remote_user     = 'darobe'
+@mysql_remote_password = 'de1286'
+@mysql_remote_db_name  = 'portfolio_site_wp'
+@mysql_remote_host     = 'mysql.nomadicdigital.ca'              # this might be different on your production environment
 
-@git_repo = 'git@github.com:githubusername/your-project.git'
-@local_hostnames = ['leaf.local','sitka.local']   # put your development machines names here (run hostname from the commmand line)
+@git_repo = 'git@github.com:danroberts/nomadicdigital.ca.git'
+@local_hostnames = ['localhost','sitka.local', 'dyn-164-098.wireless.concordia.ca']   # put your development machines names here (run hostname from the commmand line)
 
 def local?
   hostname = `hostname`.strip 
@@ -35,7 +35,7 @@ def local?
 end
 
 desc "Deploy files to remote"
-task :deploy
+task :deploy do
   # assumes you've checked in files and pushed already
   # ssh to remote and git pull
   # 
