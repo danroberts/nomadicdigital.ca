@@ -6,7 +6,7 @@
 		<?php /* If this is a category archive */ if (is_category()) { ?>
 		<h4 class="pagetitle">Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h4>
 		<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-		<div id="filterNav">Projects tagged with: <?php single_tag_title(); ?> | <a href="?page_id=5">remove filter</a></div>
+		<div id="filterNav"><h5>Projects tagged with: <?php single_tag_title(); ?> | <a href="?page_id=5">remove filter</a></h5></div>
 		
 		<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
 		<h4 class="pagetitle">Archive for <?php the_time('F jS, Y'); ?></h4>

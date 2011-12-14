@@ -12,13 +12,13 @@
  */
 ?>
 
-	<?php if(!is_front_page()):?>
-		<div id="filterNav">Filter by: <?php wp_get_all_tags(); ?></div>
+	<?php if(is_home()):?>
+		<div id="filterNav"><h5>Filter by: <?php wp_get_all_tags(); ?></h5></div>
 	<?php endif; ?>
 
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		
-			<?php if ( is_front_page() ): ?>
+			<?php if ( is_front_page() || is_page(167) ): ?>
 	
 				<?php the_content(); ?>
 	

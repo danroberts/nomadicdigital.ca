@@ -35,25 +35,25 @@
 </head>
 
 <body>
-	<div id="container">
-
-	    <div id="main" role="main">
-		<div id="horizontal-container">
-		<div id="sidebar">
-			<div id="logo">
-					<a href='<?php echo get_option('home'); ?>'><img src="<?php bloginfo('template_directory'); ?>/images/NDLogo.png"/ width="190" height="205"></a>
-				</div>
-			<div id="nav">
-				
-				<ul>
-					<li><a href="<?php echo get_option('home');?>">home</a>
-					<?php wp_nav_menu( array('menu' => 'Main Menu' )); ?>
-				</ul>
-			</div>
+	<header>
+	<div id="logo">
+			<a href='<?php echo get_option('home'); ?>'><img src="<?php bloginfo('template_directory'); ?>/images/NDLogo.png"/></a>
 		</div>
+	</header>
+	<div id="container">
+		
+	    <div id="main" role="main">
+			
+		<div id="horizontal-container">
+		
 			
 		<div id="content">
-		
+				<div id="nav">
+
+					<ul>
+						<?php wp_nav_menu( array('menu' => 'Main Menu' )); ?>
+					</ul>
+				</div>
 			<div class="breadcrumbs">
 			<?php
 			if(function_exists('bcn_display'))

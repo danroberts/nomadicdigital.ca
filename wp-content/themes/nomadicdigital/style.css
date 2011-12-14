@@ -52,9 +52,23 @@ body { height: 100%;}
 	src: url('fonts/Mido.otf');
 }
 
+a {
+	color: white;
+}
 
 #tagline {
 	margin-left: 35px;
+}
+
+header {
+	border-bottom: 1px dotted #FECF0E;
+}
+
+#logo {
+	width: 1080px;
+	padding-left: 100px;
+	margin: auto;
+	text-align: left;
 }
 
 h2 {
@@ -78,9 +92,9 @@ span.bracket {
 }
 
 #container {
-	padding: 100px;
+	padding: 0px 100px;
 	text-align: left;
-	width: 1280px;
+	width: 1080px;
 	margin: auto;
 	height: 100%;
 }
@@ -88,10 +102,11 @@ span.bracket {
 #main {
 	padding: 0px 50px;
 	height: 100%;
+	clear: both;
 }
 
 #content {
-	margin-left: 220px;
+	margin-left: 0px;
 	padding: 40px;
 	min-height: 550px;
 
@@ -106,7 +121,6 @@ span.bracket {
 
 
 #featured_image {
-	float: left;
 	margin-bottom: 20px;
 	margin-left: 225px;
 }
@@ -186,7 +200,7 @@ footer {
    ========================================================================== */
 
 a { color: ##eeeeee; }
-a:visited { color: #551a8b; }
+a:visited { color: #eeeeee; }
 a:hover { color: #FECF0E; }
 a:focus { outline: thin dotted; }
 
@@ -202,16 +216,12 @@ a:hover, a:active { outline: 0; }
 }
 
 #nav {
-	width: 150px;
+	margin-left: 500px;
+	margin-bottom: 30px;
 	height: 100%;
-	clear: both;
-	
-	min-height: 100px;
-	margin-top: 30px;
-	padding: 20px 20px 100% 20px;
-	
-	margin-bottom:-100%;
-	
+	margin-top: -80px;
+	padding: 20px;
+	min-width: 400px;
 	background: rgb(22, 22, 22);
 	/* RGBa with 0.6 opacity */
 	background: rgba(22, 22, 22, 0.95);
@@ -224,14 +234,14 @@ a:hover, a:active { outline: 0; }
 #nav ul {padding:0; margin:0;}
 #nav li {list-style-type: none;}
 
-#nav a {color: #eeeeee; display: block; text-decoration: none; font-family: Mido; font-size: 16px;}
+#nav a {color: #eeeeee; text-decoration: none; font-family: Mido; font-size: 16px; float: left; min-width: 60px; padding: 0px 10px; border: 1px dotted white; margin-bottom: 5px; text-align: center}
 #nav a:hover {color: #FECF0E}
 
 .breadcrumbs {
 	font-family: Mido;
 	font-size: 24px;
 	color: #eeeeee;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .breadcrumbs a {
@@ -243,9 +253,14 @@ a:hover, a:active { outline: 0; }
 	text-decoration: underline;
 }
 
-#filterNav a {
-	color: #eeeeee;
+#filterNav a, #filterNav {
+	color: #999999;
+	font-family: sans-serif;
 	text-decoration: none;
+}
+
+#filterNav h5 {
+	margin-top: 0px;
 }
 
 #filterNav a:hover {
@@ -327,7 +342,7 @@ color:#fff;
 
 .portfolio-page p {
 	float: left;
-	width: 300px;
+	width: 180px;
 	margin-left: 20px;
 	margin-top: 0px;
 }
